@@ -1,0 +1,18 @@
+<h1>Edit <%= @band.name %></h1>
+
+<form action="/bands/<%=@band.id %>" method="POST">
+  <label> Band Name </label>
+  <input type="text" name="name" value="<%=@band.name %>"> </br>
+
+  <label> Band Founder </label>
+  <input type="text" name="founder" value="<%=@band.founder%>"> </br>
+
+  <label> Which Instrument does this belong in? </label>
+  <select name="instrument_id">
+    <% current_user.instruments.each do |instrument| %>
+      <option value=<%=instrument.id %> <%= "selected" if instrument.id==@band.instrument.id %> ><%= instrument.name %></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Update">
+</form>

@@ -1,0 +1,18 @@
+<h1>Add a New Music Band</h1>
+
+<form action="/bands" method="POST">
+  <label> Band Name </label>
+  <input type="text" name="name"> </br>
+
+  <label> Band Founder </label>
+  <input type="text" name="founder"> </br>
+
+  <label> Which Instrument does this belong in? </label>
+  <select name="instrument_id">
+    <% current_user.instruments.each do |instrument| %>
+      <option value=<%=instrument.id %>><%= instrument.name %></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Create">
+</form>
