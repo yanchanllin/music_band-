@@ -1,8 +1,7 @@
-# MusicBand
+Music Band
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/music_band`. To experiment with that code, run `bin/console` for an interactive prompt.
+To use this app, just clone, run rake db:migrate and then run shotgun. Everything should be set up.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -40,4 +39,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the MusicBand project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'yanchanllin'/music_band/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Libraries project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'yanchanllin'/music_band/blob/master/CODE_OF_CONDUCT.md).
