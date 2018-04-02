@@ -1,0 +1,6 @@
+<p> Here are your instruments, <%= @user.username %>
+<% @user.instruments.each do |instrument| %>
+  <ul>
+    <li><a href="/instruments/<%=instrument.id%>"><%= instrument.name %></a></li>
+  </ul>
+<% end %>
