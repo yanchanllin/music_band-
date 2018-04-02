@@ -1,0 +1,7 @@
+<% @instruments.each do |instrument| %>
+  <%= instrument.name %><br />
+  <%= instrument.weight %> <br />
+  <a href="/instruments/<%=instrument.id%>/edit">Edit</a>
+  <br />
+  <br />
+<% end %>

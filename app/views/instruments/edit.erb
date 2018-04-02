@@ -1,0 +1,11 @@
+<h1>Edit <%= @instrument.name %></h1>
+
+<form action="/instruments/<%=@instrument.id %>" method="POST">
+  <label> Instrument Name </label>
+  <input type="text" name="name" value="<%=@instrument.name %>"> </br>
+
+  <label> instrument weight </label>
+  <input type="number" name="weight" value="<%=@instrument.weight %>"> </br>
+
+  <input type="submit" value="Update">
+</form>

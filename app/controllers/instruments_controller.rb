@@ -15,33 +15,33 @@ class InstrumentsController < ApplicationController
   get "/instruments/:id/edit" do
     redirect_if_not_logged_in
     @error_message = params[:error]
-    @Instrument = MusicInstrument.find(params[:id])
-    erb :'golf_bags/edit'
+    @Instrument = Instrument.find(params[:id])
+    erb :'instruments/edit'
   end
 
   post "/instruments/:id" do
     redirect_if_not_logged_in
-    @Instrument = MusicInstrument.find(params[:id])
-    unless MusicInstrument.valid_params?(params)
-      redirect "/instruments/#{@instrument.id}/edit?error=invalid Music Instrument"
+    @Instrument = Instrument.find(params[:id])
+    unless Instrument.valid_params?(params)
+      redirect "/instruments/#{@instrument.id}/edit?error=invalid Instrument"
     end
-    @instrument.update(params.select{|k|k=="name" || k=="capacity"})
+    @instrument.update(params.select{|k|k=="name" || k=="weight"})
     redirect "/instruments/#{@instrument.id}"
   end
 
   get "/instruments/:id" do
     redirect_if_not_logged_in
-    @Instrument = MusicInstrument.find(params[:id])
-    erb :'music_instruments/show'
+    @Instrument =Instrument.find(params[:id])
+    erb :'instruments/show'
   end
 
   post "/instruments" do
     redirect_if_not_logged_in
 
-    unless MusicInstrument.valid_params?(params)
-      redirect "/instruments/new?error=invalid Music Instrument"
+    unless Instrument.valid_params?(params)
+      redirect "/instruments/new?error=invalid Instrument"
     end
-    MusicInstrument.create(params)
+   Instrument.create(params)
     redirect "/instruments"
   end
 end
