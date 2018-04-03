@@ -10,7 +10,7 @@
   <label> Which Instrument does this belong in? </label>
   <select name="instrument_id">
     <% current_user.instruments.each do |instrument| %>
-      <option value=<%=instrument.id %> <%= "selected" if instrument.id==@band.instrument.id %> ><%= instrument.name %></option>
+      <option value="<%=instrument.id %>" <%= "selected" if instrument.id==@band.instrument.id %> ><%= instrument.name %></option>
     <% end %>
   </select>
 
