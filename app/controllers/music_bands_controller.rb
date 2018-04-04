@@ -46,6 +46,6 @@ class MusicBandsController < ApplicationController
   delete "/bands/:id" do
     @band = MusicBand.find(params[:id])
      @band.delete if @band
-      redirect "/music_bands/index"
+      redirect "/bands"
    end
 end

@@ -10,7 +10,6 @@
 
         <a href="/bands/new"> Create Band </a>
         <a href="/instruments/new"> Create Instrument </a>
-        <a href="/delete"> Delete Band </a>
         <a href="/logout"> Log Out </a>
         <p>Welcome, <%=current_user.username %></p>
 
@@ -21,7 +20,7 @@
 
     </nav>
     <div class="container">
-      <h1>Music Player</h1>
+
       <% if !@error_message.nil? %>
       <div class="alert alert-warning">
         <%= @error_message %>

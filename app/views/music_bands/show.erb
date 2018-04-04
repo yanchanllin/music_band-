@@ -1,6 +1,11 @@
+<h1>Music Band</h1>
 <%= @band.name %><br />
  <%= @band.founder%> <br />
  instrument: <a href="/instruments/<%=@band.instrument.id%>"><%= @band.instrument.name %></a> <br />
  <a href="/bands/<%=@band.id%>/edit">Edit</a>
+ <form method="POST" action="/bands/<%= @band.id %>">
+   <input type='hidden' name='_method' value='DELETE'/>
+   <input type="submit" value="Delete band">
+ </form>
  <br />
  <br />

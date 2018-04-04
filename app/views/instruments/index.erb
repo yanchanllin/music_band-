@@ -1,6 +1,7 @@
+<h1>Instrument</h1>
 <% @instruments.each do |instrument| %>
   <%= instrument.name %><br />
-  <%= instrument.weight %> <br />
+  <%= instrument.weight %>lbs <br />
   <a href="/instruments/<%=instrument.id%>/edit">Edit</a>
   </div>
 </form>

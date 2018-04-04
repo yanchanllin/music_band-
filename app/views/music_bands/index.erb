@@ -1,5 +1,6 @@
+<h1>Music Band</h1>
 <% @bands.each do |band| %>
-  <%= band.name %><br />
+<a href="/bands/<%=band.id%>"><%= band.name %></a><br />
   <%= band.founder %> <br />
   <%= band.instrument.name %> <br />
   <a href="/bands/<%=band.id%>/edit">Edit</a>

@@ -1,12 +1,8 @@
+<h1>Instrument</h1>
 <%= @instrument.name %><br />
   <%= @instrument.weight %> <br />
 
-  <h2>Bands</h2>
-  <ul>
-  <% @instrument.music_bands.each do |band| %>
-    <li><a href="/bands/<%=band.id%>"><%= band.name %></a></li>
-  <% end%>
-  </ul>
+
   <a href="/instruments/<%=@instrument.id%>/edit">Edit</a>
   <br />
   <br />
