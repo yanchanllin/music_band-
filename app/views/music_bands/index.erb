@@ -1,8 +1,8 @@
 <h1>Music Band</h1>
 <% @bands.each do |band| %>
-<a href="/bands/<%=band.id%>"><%= band.name %></a><br />
-  <%= band.founder %> <br />
-  <%= band.instrument.name %> <br />
+Band:   &nbsp   <a href="/bands/<%=band.id%>"><%= band.name %></a><br />
+  Founder:  &nbsp  <%= band.founder %> <br />
+  instrument: &nbsp  <%= band.instrument.name %> <br />
   <a href="/bands/<%=band.id%>/edit">Edit</a>
   <br />
   <br />

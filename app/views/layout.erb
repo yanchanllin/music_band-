@@ -8,10 +8,10 @@
     <nav>
       <% if logged_in? %>
 
-        <a href="/bands/new"> Create Band </a>
-        <a href="/instruments/new"> Create Instrument </a>
+        <a href="/bands/new"> Create Band </a> <br>
+        <a href="/instruments/new"> Create Instrument </a><br>
         <a href="/logout"> Log Out </a>
-        <p>Welcome, <%=current_user.username %></p>
+        <p>Welcome, <%=current_user.username %></p> <br />
 
       <% else %>
         <a href="/signup">Sign Up</a>
