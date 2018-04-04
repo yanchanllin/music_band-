@@ -15,13 +15,13 @@ class InstrumentsController < ApplicationController
   get "/instruments/:id/edit" do
     redirect_if_not_logged_in
     @error_message = params[:error]
-    @Instrument = Instrument.find(params[:id])
+    @instrument = Instrument.find(params[:id])
     erb :'instruments/edit'
   end
 
   post "/instruments/:id" do
     redirect_if_not_logged_in
-    @Instrument = Instrument.find(params[:id])
+    @instrument = Instrument.find(params[:id])
     unless Instrument.valid_params?(params)
       redirect "/instruments/#{@instrument.id}/edit?error=invalid Instrument"
     end
@@ -31,7 +31,7 @@ class InstrumentsController < ApplicationController
 
   get "/instruments/:id" do
     redirect_if_not_logged_in
-    @Instrument =Instrument.find(params[:id])
+    @instrument =Instrument.find(params[:id])
     erb :'instruments/show'
   end
 

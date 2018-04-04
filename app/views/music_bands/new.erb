@@ -9,7 +9,7 @@
 
   <label> Which Instrument does this belong in? </label>
   <select name="instrument_id">
-    <% current_user.instruments.each do |instrument| %>
+    <% Instrument.all.each do |instrument| %>
       <option value="<%= instrument.id %>" ><%= instrument.name %></option>
     <% end %>
   </select>
