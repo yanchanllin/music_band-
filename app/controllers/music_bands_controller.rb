@@ -24,7 +24,8 @@ class MusicBandsController < ApplicationController
     unless MusicBand.valid_params?(params)
       redirect "/bands/#{@band.id}/edit?error=invalid music band"
     end
-    @band.update(params.select{|k|k=="name" || k=="founder" || k=="music_instrument_id"})
+
+    @band.update(params.select{|k|k=="name" || k=="founder" || k=="instrument_id"})
     redirect "/bands/#{@band.id}"
   end
 
