@@ -1,7 +1,5 @@
 Creating musical bands
-// Used activerecord and multiple models
-// The user that created a given piece of content is the only person who can modify that content 
-// Validations for user input to ensure that bad data isn't added to the database, unique value before creating the user
+Used activerecord and multiple models. The user that created a given piece of content is the only person who can modify that content. Validations for user input to ensure that bad data isn't added to the database, unique value before creating the user
 
 To use this app, just clone, run rake db:migrate and then run shotgun. Everything should be set up.
 
